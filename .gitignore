@@ -41,4 +41,4 @@ auth_db_neonix/.env
 auth_db_neonix/security/neoquant-config-firebase-adminsdk-fbsvc-a0a678bb10.json
 
 # Dev-Documentation
-auth_db_neonix/Docs
+auth_db_neonix/Docs/
