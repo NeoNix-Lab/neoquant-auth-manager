@@ -9,6 +9,7 @@ from datetime import datetime
 # TODO [ ] Consider converting to a dataclass for simplicity
 # endregion
 
+
 class User:
     """
     Represents a user object with profile info, authentication tokens, and settings.
