@@ -26,15 +26,14 @@ jobs:
         run: pip install --upgrade build
 
       - name: Build package
-        run: python -m build
-
-      - name: Test build with secret
+        # se il packaging usa i secret, spostalo sotto env
         env:
           FIREBASE_API_KEY: ${{ secrets.FIREBASE_API_KEY }}
           FERNET_KEY: ${{ secrets.FERNET_KEY }}
           FIREBASE_CONFIG_B64: ${{ secrets.FIREBASE_CONFIG_B64 }}
-        run: |
-          python -c "import auth-db-neonix; print(auth-db-neonix.use_secret())"
+        working-directory: auth_db_neonix
+        run: python -m build
 
       - name: Publish to PyPI
         uses: pypa/gh-action-pypi-publish@release/v1
+
