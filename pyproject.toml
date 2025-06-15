@@ -28,6 +28,9 @@ build-backend = "setuptools.build_meta"
 [tool.setuptools]
 packages = ["auth_db_neonix"]
 
+[tool.setuptools.packages.find]
+include = ["auth_db_neonix*", "auth_db_neonix.*"]
+
 [tool.setuptools.package-data]
 auth_db_neonix = ["security/*.json"]
 
