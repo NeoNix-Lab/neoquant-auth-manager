@@ -31,7 +31,7 @@ jobs:
           FIREBASE_API_KEY: ${{ secrets.FIREBASE_API_KEY }}
           FERNET_KEY: ${{ secrets.FERNET_KEY }}
           FIREBASE_CONFIG_B64: ${{ secrets.FIREBASE_CONFIG_B64 }}
-        working-directory: auth_db_neonix
+        #working-directory: auth_db_neonix
 
         run: python -m build
 
