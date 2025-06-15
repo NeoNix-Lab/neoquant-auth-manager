@@ -25,8 +25,8 @@ dev = [
 requires = ["setuptools>=61.0"]
 build-backend = "setuptools.build_meta"
 
-[tool.setuptools]
-packages = ["auth_db_neonix"]
+#[tool.setuptools]
+#packages = ["auth_db_neonix"]
 
 [tool.setuptools.packages.find]
 include = ["auth_db_neonix*", "auth_db_neonix.*"]
