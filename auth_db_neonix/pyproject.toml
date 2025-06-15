@@ -1,5 +1,5 @@
 [project]
-name = "auth-db-neonix"
+name = "auth_db_neonix"
 version = "0.1.0"
 description = "User auth, settings management, and local DB handling with Firebase and SQLite"
 authors = [

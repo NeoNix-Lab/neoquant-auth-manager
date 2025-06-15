@@ -9,7 +9,7 @@ jobs:
   build_and_publish:
     runs-on: ubuntu-latest
     environment:
-      name: pypi-release
+      name: publish
     permissions:
       id-token: write  # necessario per OIDC/trusted publishing
       contents: read
