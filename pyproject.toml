@@ -1,6 +1,6 @@
 [project]
 name = "auth_db_neonix"
-version = "0.1.2"
+version = "0.1.3"
 description = "User auth, settings management, and local DB handling with Firebase and SQLite"
 authors = [
     { name="NeoNix", email="rittoone@gmail.com" }
@@ -30,10 +30,10 @@ build-backend = "setuptools.build_meta"
 
 [tool.setuptools.packages.find]
 where = ["."]
-include = ["auth_db_neonix*"]
+include = ["auth_db_neonix*", "auth_db_neonix.*"]
 
-[tool.setuptools.package-data]
-auth_db_neonix = ["security/*.json"]
+#[tool.setuptools.package-data]
+#auth_db_neonix = ["security/*.json"]
 
 [project.scripts]
 authdb-main = "auth_db_neonix.main:main"
