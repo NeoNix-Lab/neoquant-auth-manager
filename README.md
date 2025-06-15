@@ -15,7 +15,7 @@ Authentication and settings management module for Python apps using Firebase for
 ### From GitHub
 
 ```bash
-pip install git+https://github.com/<your-username>/auth_db_neonix.git
+pip install git+https://github.com/NeoNix-Lab/neoquant-auth-manager.git
 ```
 
 ### For Development
