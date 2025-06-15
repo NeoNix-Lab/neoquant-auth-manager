@@ -33,3 +33,4 @@ auth_db_neonix = ["security/*.json"]
 
 [project.scripts]
 authdb-main = "auth_db_neonix.main:main"
+
