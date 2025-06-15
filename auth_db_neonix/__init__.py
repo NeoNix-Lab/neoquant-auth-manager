@@ -9,9 +9,6 @@ from .services.firebase_init import firebase_init
 from .models.user import User
 from .dto.user_settings_dto import DbSetting
 from .dto.base_settings_dto import BaseSettingsDto
-
-from .version import __version__
-
 import main
 
 # TODOs:
@@ -34,7 +31,6 @@ __all__ = [
     "BaseSettingsDto",
     "encrypt",
     "decrypt",
-    "__version__",
     "firebase_init",
     "main"
 ]
