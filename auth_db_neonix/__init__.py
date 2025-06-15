@@ -1,18 +1,18 @@
-from auth_db_neonix.security.auth import login, signup, signup, verify_cookie_from_module, verify_cookie_from_https
-from auth_db_neonix.security.cripto import encrypt, decrypt
+from .security.auth import login, signup, signup, verify_cookie_from_module, verify_cookie_from_https
+from .security.cripto import encrypt, decrypt
 
-from auth_db_neonix.services.fire_client_service import FirebaseClient
-from auth_db_neonix.services.sqlite_service import SQLiteManager
-from auth_db_neonix.services.data_retriver_service import DataRetriever
-from auth_db_neonix.services.firebase_init import firebase_init
+from .services.fire_client_service import FirebaseClient
+from .services.sqlite_service import SQLiteManager
+from .services.data_retriver_service import DataRetriever
+from .services.firebase_init import firebase_init
 
-from auth_db_neonix.models.user import User
-from auth_db_neonix.dto.user_settings_dto import DbSetting
-from auth_db_neonix.dto.base_settings_dto import BaseSettingsDto
+from .models.user import User
+from .dto.user_settings_dto import DbSetting
+from .dto.base_settings_dto import BaseSettingsDto
 
-from auth_db_neonix.version import __version__
+from .version import __version__
 
-from auth_db_neonix import main
+import main
 
 # TODOs:
 # TODO - Add session management helper for web frameworks (e.g., Flask, FastAPI)
