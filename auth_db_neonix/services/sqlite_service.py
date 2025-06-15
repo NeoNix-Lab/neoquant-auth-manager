@@ -1,17 +1,19 @@
-# TODOs for future implementations:
-# - Add method: push_objects(obj_list, tab_schema, insert_query, unique_key?)
-# - Add method: update_records(table_name, updates_dict, conditions_dict)
-# - Add method: retrieve_by_values(col_name, table_name, values_list)
-# - Add method: exists_check(col_name, table_name, values_list)
-# - Add method: delete_records(table_name, conditions_dict)
-# - Add option to switch DB path dynamically (reinitialize safely)
-# - Accept DbSetting instance and extract item_db_path from it
-
 import sqlite3
 import os
 from pathlib import Path
 from typing import List, Tuple, Any, Union
 from auth_db_neonix.dto.user_settings_dto import DbSetting
+
+
+# region TODOs for future implementations:
+# TODO - Add method: push_objects(obj_list, tab_schema, insert_query, unique_key?)
+# TODO - Add method: update_records(table_name, updates_dict, conditions_dict)
+# TODO - Add method: retrieve_by_values(col_name, table_name, values_list)
+# TODO - Add method: exists_check(col_name, table_name, values_list)
+# TODO - Add method: delete_records(table_name, conditions_dict)
+# TODO - Add option to switch DB path dynamically (reinitialize safely)
+# TODO - Accept DbSetting instance and extract item_db_path from it
+# endregion
 
 
 class SQLiteManager:

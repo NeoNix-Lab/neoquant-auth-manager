@@ -1,7 +1,7 @@
 import firebase_admin
 from firebase_admin import credentials, firestore
 from pathlib import Path
-from auth_db_neonix.dto.user_settings_dto import BaseSettingsDto
+from auth_db_neonix.dto.base_settings_dto import BaseSettingsDto
 
 # TODO utilizzare una transaction per scongiurare problemi di conocorrenza
 # TODO verificare che sia safe sui doppioni dei nomi
