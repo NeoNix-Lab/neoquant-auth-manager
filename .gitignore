@@ -1,0 +1,44 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# SQLite / Data
+*.sqlite3
+*.db
+*.pkl
+
+# Env
+.env
+*.env
+
+# Logs
+*.log
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.cache/
+.pytest_cache/
+
+# Virtualenv
+venv/
+ENV/
+.venv/
+
+# IDEs and editors
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Secrets
+auth_db_neonix/.env
+auth_db_neonix/security/neoquant-config-firebase-adminsdk-fbsvc-a0a678bb10.json
+
+# Dev-Documentation
+auth_db_neonix/Docs
