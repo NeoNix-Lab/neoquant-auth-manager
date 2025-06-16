@@ -1,0 +1,7 @@
+cryptography==45.0.4
+fastapi==0.115.12
+firebase_admin==6.9.0
+pandas==2.3.0
+pytest==8.4.0
+python-dotenv==1.1.0
+Requests==2.32.4
