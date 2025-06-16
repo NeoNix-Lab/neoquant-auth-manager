@@ -13,5 +13,9 @@ def firebase_start():
     return log
 
 
+def test_variables():
+    print(firebase_init())
+
+
 if __name__ == "__main__":
     firebase_start()

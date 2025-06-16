@@ -30,3 +30,8 @@ def firebase_init():
         initialize_app(cred)
     else:
         raise RuntimeError("Missing FIREBASE_CONFIG_B64 environment variable")
+
+
+def checkVariables():
+    load_dotenv()
+    return os.getenv("FIREBASE_CONFIG_B64"), os.getenv("FERNET_KEY"), os.getenv("FIREBASE_API_KEY")
