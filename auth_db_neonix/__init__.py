@@ -9,7 +9,7 @@ from .services.firebase_init import firebase_init
 from .models.user import User
 from .dto.user_settings_dto import DbSetting
 from .dto.base_settings_dto import BaseSettingsDto
-import main
+from auth_db_neonix import main
 
 # TODOs:
 # TODO - Add session management helper for web frameworks (e.g., Flask, FastAPI)

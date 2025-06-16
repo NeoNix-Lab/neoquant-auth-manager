@@ -20,7 +20,7 @@ def firebase_init():
     Expects the environment variable FIREBASE_CONFIG_B64 to be present,
     which must contain the base64-encoded content of the Firebase admin SDK JSON.
     """
-    load_dotenv("auth_db_neonix/.env")
+    load_dotenv()
 
     firebase_b64 = os.getenv("FIREBASE_CONFIG_B64")
     if firebase_b64:
