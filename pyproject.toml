@@ -1,6 +1,6 @@
 [project]
 name = "auth_db_neonix"
-version = "0.1.4"
+version = "0.1.5"
 description = "User auth, settings management, and local DB handling with Firebase and SQLite"
 authors = [
     { name="NeoNix", email="rittoone@gmail.com" }
