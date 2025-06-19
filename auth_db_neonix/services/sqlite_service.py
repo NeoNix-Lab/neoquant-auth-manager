@@ -1,8 +1,8 @@
 import sqlite3
 import os
 from pathlib import Path
-from typing import List, Tuple, Any, Union
-from auth_db_neonix.dto.user_settings_dto import DbSetting
+from typing import List, Union
+from auth_db_neonix.models.user_settings_models import DbSetting
 
 
 # region TODOs for future implementations:

@@ -25,26 +25,8 @@ jobs:
       - name: Install build tools
         run: pip install --upgrade build
 
-      - name: Test visibility of secrets
-        env:
-          FIREBASE_CONFIG_B64: ${{ secrets.FIREBASE_CONFIG_B64 }}
-          FERNET_KEY: ${{ secrets.FERNET_KEY }}
-          FIREBASE_API_KEY: ${{ secrets.FIREBASE_API_KEY }}
-        run: |
-          python - <<EOF
-          import os
-          print("CONFIG:", os.getenv("FIREBASE_CONFIG_B64"))
-          print("FERNET:", os.getenv("FERNET_KEY"))
-          print("API:", os.getenv("FIREBASE_API_KEY"))
-          EOF
 
       - name: Build package
-        # se il packaging usa i secret, spostalo sotto env
-        env:
-          FIREBASE_API_KEY: ${{ secrets.FIREBASE_API_KEY }}
-          FERNET_KEY: ${{ secrets.FERNET_KEY }}
-          FIREBASE_CONFIG_B64: ${{ secrets.FIREBASE_CONFIG_B64 }}
-        #working-directory: auth_db_neonix
 
         run: python -m build
 

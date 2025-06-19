@@ -1,5 +1,5 @@
 from typing import TypedDict
-
+# TODO : e usato nelle classi?
 
 class BaseSettingsDto(TypedDict):
     """

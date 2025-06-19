@@ -1,4 +1,4 @@
-from ..models.settings_base_class import SettingsBaseClass, SettingsTypeEnum as TypeEnum
+from auth_db_neonix.models.settings_base_class import SettingsBaseClass, SettingsTypeEnum as TypeEnum
 
 
 # TODO: Validate paths (e.g., check if files exist, or match expected format)

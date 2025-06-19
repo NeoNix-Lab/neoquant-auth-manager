@@ -9,7 +9,7 @@ import sqlite3
 import pandas as pd
 from pathlib import Path
 from typing import Union
-from auth_db_neonix.dto.user_settings_dto import DbSetting
+from auth_db_neonix.models.user_settings_models import DbSetting
 
 
 class DataRetriever:

@@ -1,4 +1,4 @@
-from dotenv import load_dotenv
+from dotenv import load_dotenv, find_dotenv, set_key
 from cryptography.fernet import Fernet
 import os
 
@@ -15,16 +15,24 @@ load_dotenv()
 
 def get_fernet():
     """
-    Retrieve the Fernet object using the key from environment variables.
-    """
+   Retrieve the Fernet object using the key from environment variables.
+   """
+    dotenv_path = find_dotenv()
+    load_dotenv(dotenv_path, override=True)
+
+    key = os.getenv("FERNET_KEY")
+    if not key:
+        # Genera una nuova chiave
+        key = Fernet.generate_key().decode()
+        # Salva nel file .env (creandolo o aggiornandolo)
+        set_key(dotenv_path, "FERNET_KEY", key)
+        os.environ["FERNET_KEY"] = key  # aggiorna anche l'env corrente
+
     try:
-        key = os.getenv("FERNET_KEY")
-        if not key:
-            raise ValueError("FERNET_KEY not set in environment")
         return Fernet(key.encode())
     except Exception as ex:
         print(f"Failed to initialize Fernet: {ex}")
-        # raise ex  # Uncomment to propagate the error
+        raise
 
 
 def encrypt(text: str) -> str:
