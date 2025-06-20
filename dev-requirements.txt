@@ -11,6 +11,7 @@ anyio==4.9.0
     #   httpx
     #   starlette
 black==25.1.0
+
     # via auth_db_neonix (pyproject.toml)
 cachecontrol==0.14.3
     # via firebase-admin
