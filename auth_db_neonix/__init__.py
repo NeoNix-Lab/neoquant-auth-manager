@@ -5,7 +5,6 @@ from .services.data_retriver_service import DataRetriever
 
 from auth_db_neonix.models.user_settings_models import DbSetting
 from .dto.base_settings_dto import BaseSettingsDto
-from auth_db_neonix import main
 
 # TODOs:
 # TODO - Add session management helper for web frameworks (e.g., Flask, FastAPI)
@@ -20,6 +19,5 @@ __all__ = [
     "DbSetting",
     "BaseSettingsDto",
     "encrypt",
-    "decrypt",
-    "main"
+    "decrypt"
 ]
