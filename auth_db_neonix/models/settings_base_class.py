@@ -81,14 +81,30 @@ class SettingsBaseClass(ABC):
     def from_dict(cls, record: dict) -> "SettingsBaseClass":
         """
         Reconstructs a settings object from a dictionary.
-
-        WARNING: This will fail if used with abstract base class directly.
-        TODO: Implement factory pattern to return correct subclass based on record["Type"]
+        Handles both enum names (e.g., 'SOCKET') and values ('2').
         """
+        raw_type = record["Type"]
+
+        # Risolve sia "SOCKET", "2", 2, ecc.
+        try:
+            if isinstance(raw_type, str):
+                if raw_type.isdigit():
+                    set_type = SettingsTypeEnum(int(raw_type))
+                else:
+                    set_type = SettingsTypeEnum[raw_type]  # enum by name
+            elif isinstance(raw_type, int):
+                set_type = SettingsTypeEnum(raw_type)
+            elif isinstance(raw_type, SettingsTypeEnum):
+                set_type = raw_type
+            else:
+                raise ValueError("Unrecognized enum format")
+        except (KeyError, ValueError, TypeError) as e:
+            raise ValueError(f"Invalid setting type '{raw_type}': {e}")
+
         return cls(
-            SettingsTypeEnum(record["Type"]),
-            record["Is_Default"],
-            record["Name"],
-            record["Id"],
-            record["Settings"],
+            setting_type=set_type,
+            is_default=record["Is_Default"],
+            name=record["Name"],
+            settings_id=record["Id"],
+            settings=record["Settings"]
         )
