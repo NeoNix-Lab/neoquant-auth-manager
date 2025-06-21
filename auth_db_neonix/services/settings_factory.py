@@ -4,6 +4,8 @@ from ..models.settings_base_class import SettingsBaseClass, SettingsTypeEnum
 
 def settings_from_dict(record: dict) -> SettingsBaseClass:
     raw_type = record["Type"]
+    # TODO costretto a rimuovere il parametro type per brutta architettura dei settings
+    record = record.pop("Type", None)
 
     if isinstance(raw_type, str):
         setting_type = SettingsTypeEnum[raw_type] if not raw_type.isdigit() else SettingsTypeEnum(int(raw_type))
