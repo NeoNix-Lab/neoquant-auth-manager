@@ -5,7 +5,8 @@ class RegisterRequest(BaseModel):
     email: str
     password: str
     model_config = {
-        "arbitrary_types_allowed": True
+        "arbitrary_types_allowed": True,
+        "strict": False
     }
 
 
@@ -16,7 +17,8 @@ class UserRequest(BaseModel):
     jwt: str
     settings: [str]
     model_config = {
-        "arbitrary_types_allowed": True
+        "arbitrary_types_allowed": True,
+        "strict": False
     }
 
 
@@ -28,6 +30,7 @@ class SettingsRequest(BaseModel):
     wt: str
     settings: str
     model_config = {
-        "arbitrary_types_allowed": True
+        "arbitrary_types_allowed": True,
+        "strict": False
     }
 

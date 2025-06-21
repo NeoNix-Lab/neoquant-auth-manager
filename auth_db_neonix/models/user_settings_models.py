@@ -50,6 +50,17 @@ class DbSetting(SettingsBaseClass):
             "UI_PPATH": self.ui_path
         }
 
+    @staticmethod
+    def from_dict(record: dict):
+        return DbSetting(
+            record["Settings"]["ITEM_DB_PATH"],
+            record["Settings"]["DATA_DB_PATH"],
+            record["Settings"]["UI_PPATH"],
+            record["Name"],
+            record["Id"],
+            record["Is_Default"]
+        )
+
 
 class SocketSettings(SettingsBaseClass):
     """
@@ -80,7 +91,7 @@ class SocketSettings(SettingsBaseClass):
         """
         self.port = port
         self.address = address
-        super().__init__(TypeEnum.PATH, is_default, name, settings_id)
+        super().__init__(TypeEnum.SOCKET, is_default, name, settings_id)
 
     def _set_settings(self) -> dict:
         """
@@ -93,3 +104,13 @@ class SocketSettings(SettingsBaseClass):
             "PORT": self.port,
             "ADDRESS": self.address
         }
+
+    @staticmethod
+    def from_dict(record: dict):
+        return SocketSettings(
+            record["Settings"]["PORT"],
+            record["Settings"]["ADDRESS"],
+            record["Name"],
+            record["Id"],
+            record["Is_Default"]
+        )
