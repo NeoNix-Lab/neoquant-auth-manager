@@ -1,5 +1,6 @@
 from .settings_base_class import SettingsBaseClass as User_setting
 from ..dto.user_dto import User_Dto_as_Dict
+from ..services.settings_factory import settings_from_dict
 
 
 # region TODOs for future implementations:
@@ -35,7 +36,7 @@ class User:
         user_instance.profile = {"Username": user["Username"], "Email": user["Email"]}
         user_instance.userId = user["UserId"]
         user_instance.jwt = jwt
-        user_instance.settings = [User_setting.from_dict(val) for val in user["Settings"]]
+        user_instance.settings = [settings_from_dict(val) for val in user["Settings"]]
         return user_instance
 
     def to_dto(self):
