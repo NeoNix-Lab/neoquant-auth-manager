@@ -4,6 +4,9 @@ from pydantic import BaseModel
 class RegisterRequest(BaseModel):
     email: str
     password: str
+    model_config = {
+        "arbitrary_types_allowed": True
+    }
 
 
 class UserRequest(BaseModel):
@@ -12,6 +15,9 @@ class UserRequest(BaseModel):
     userId: str
     jwt: str
     settings: [str]
+    model_config = {
+        "arbitrary_types_allowed": True
+    }
 
 
 class SettingsRequest(BaseModel):
@@ -21,4 +27,7 @@ class SettingsRequest(BaseModel):
     name: str
     wt: str
     settings: str
+    model_config = {
+        "arbitrary_types_allowed": True
+    }
 
