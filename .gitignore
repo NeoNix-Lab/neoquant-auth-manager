@@ -8,9 +8,6 @@ __pycache__/
 *.db
 *.pkl
 
-# Env
-auth_db_neonix/.env_example
-*.env
 
 # Logs
 *.log
