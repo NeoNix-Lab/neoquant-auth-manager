@@ -1,9 +1,19 @@
 from pydantic import BaseModel
 
 
+class LoginRequest(BaseModel):
+    email: str
+    password: str
+    model_config = {
+        "arbitrary_types_allowed": True,
+        "strict": False
+    }
+
+
 class RegisterRequest(BaseModel):
     email: str
     password: str
+    fernet_client_key: str
     model_config = {
         "arbitrary_types_allowed": True,
         "strict": False
