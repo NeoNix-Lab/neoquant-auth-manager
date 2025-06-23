@@ -41,8 +41,7 @@ def test_user_to_from_dto():
                 "Type": "path",
                 "Settings": {
                     "ITEM_DB_PATH": "item.db",
-                    "DATA_DB_PATH": "data.db",
-                    "UI_PPATH": "ui.json"
+                    "DATA_DB_PATH": "data.db",                 "UI_PPATH": "ui.json"
                 },
                 "Name": "Default",
                 "Is_Default": True
